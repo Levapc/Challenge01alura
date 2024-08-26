@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Mensajes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img class="logoImg" src="imagenes/logo.png" alt="Logo">
+        <h1 class="title">Enpinktador de Mensajes</h1>
+      </div>
+      <div class="encriptbody">
+        <div class="leftside">
+          <textarea class="text-input" id="textoentrada" placeholder="Ingrese el texto aquí"></textarea> 
+          <p class="textoadvertencia">Cuidado!: Ingrese solo letras minúsculas y sin acentos</p>
+             <div class="cajabotones">
+             <button id="btn-encriptar" onclick="encriptar()">Enpinktar</button>
+             <button id="btn-desencriptar" onclick="desencriptar()">Desenpinktar</button>
+            </div>
+       </div>
+       <div class="rightside">
+         <h1 id="Encriptadorvacio">No hay mensajes Des/Enpinktados</h1>
+         <textarea id="textosalida" readonly></textarea>
+          <button id="copiar" hidden onclick="copia()">¡Copiar!</button>
+       </div>
+       </div>
+    </div>
+    <footer class="foot">
+      <h3> Desarrollado por - Ana Valeria Paz Campos </h3>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,355 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Mainfont'; 
+  src: url('font/challengefont.ttf'); 
+}
+
+/*cuerpo principal de la pagina*/
+body {
+  font-family:'Mainfont';
+  background-image: url('imagenes/paw.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fc84c8;
+}
+
+/*parte del cuerpo con funcionalidad*/
+.container {
+  width: 100%;
+  margin: 0 ;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap:  wrap;
+  align-items: baseline;
+}
+
+/*logo y titulo*/
+.logo {
+  width: 100%;
+  margin: 0 ;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:center;
+  margin-bottom: 40px;
+}
+
+.logoImg {
+  width: 50px;
+  height: auto;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.title {
+  width: fit-content;
+  font-size: 32px;
+  color: #ff0090;
+  flex-grow: 1;
+  text-align: center;
+}
+
+/*encriptador cajas y botones*/
+.encriptbody {
+  width: 100%;
+  min-height: 50%;
+  margin-top: 5px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.leftside {
+  width: 100%;
+  max-width: 60%;
+  min-height: 70vh;
+  margin-bottom: 20px;
+  align-items: flex-end;
+}
+
+.rightside {
+  width: 100%;
+  max-width: 30%;
+  min-height: 50%;
+  margin-bottom: 20px;
+
+}
+
+.cajabotones {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items:baseline;
+}
+
+#textoentrada {
+  position: relative;
+  top: auto;
+  width: 100%;
+  min-height: 70%;
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 10px;
+  border: 1px solid #ff0090;
+  background-color: #fc84c8;
+  color: #1900ff;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  resize: none;
+} 
+
+
+.textoadvertencia {
+  color: #0e0468;
+  font-size: 14px;
+  font-family: Arial;
+  margin-bottom: 20px;
+  font-weight: bolder;
+}
+
+button {
+  width: 48%;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#btn-encriptar {
+  background-color: #ff0090;
+  border: 2px solid #ffffff;
+}
+
+#btn-desencriptar {
+  background-color: #ffffff;
+  color: #ff0090;
+  border: 2px solid #ff0090;
+}
+
+#Encriptadorvacio {
+  position: absolute;
+  top: auto;
+  width: fit-content;
+  margin-top: 10%;
+  margin-left: 1%;
+  margin-right: 5%;
+  margin-bottom: 20px;
+  color: #ff0090;
+}
+
+#textosalida {
+  width: 100%;
+  min-height: 70%;
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 10px;
+  color:#ff0090; 
+  border: 1px solid #ff0090;
+  background-color: #fc84c8;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  background-image: url("imagenes/pantera.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: left;
+  resize: none;
+}
+
+#copiar {
+  width:100%;
+  background-color: #ffffff;
+  color: #ff0090;
+  border: 2px solid #ff0090;
+  margin-top: 44px;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: #ff0090;
+  color: #ffffff;
+  position: fixed;
+  bottom:0%;
+  font-size: 16px;
+}
+
+/* Monitores */
+@media (min-width: 1440px) {
+  .container {
+
+    padding: 40px;
+  }
+
+  .encriptbody {
+    width: 90%;
+    margin: 0;
+    padding: 0;
+    margin-right: 15%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap:  wrap;
+    margin-bottom: 10%;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  #Encriptadorvacio {
+    font-size: 34px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1439px) and (min-width: 768px) {
+
+  .title {
+    font-size: 32px;
+  }
+
+  .encriptbody{
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 10%;
+  }
+
+  .leftside{
+    max-width: 90%;
+    min-height: 20vh;
+    margin: 1%;
+
+  }
+
+  #textoentrada {
+    width: 100%;
+    min-height: 40vh;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0px;
+  }
+
+  .rightside {
+    max-width: 90%;
+    margin: 1%;
+  }
+
+  #copiar {
+    margin-top: 4px;
+  }
+
+  #textosalida {
+    min-height: 30%;
+    max-height: 100vh;
+    min-height: 20vh;
+  }
+  
+  #Encriptadorvacio {
+    font-size: 85%;
+    margin-top: 5%;
+    margin-left: 5%;
+  }
+
+  footer {
+    font-size: 70% ;
+  }
+}
+
+/* Celulares */
+@media (max-width: 767px) {
+
+  .title {
+    font-size: 24px;
+  }
+
+  .encriptbody{
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10%;
+  }
+
+  .leftside{
+    max-width: 90%;
+    min-height: 20vh;
+    margin: 1%;
+
+  }
+
+  #textoentrada {
+    width: 100%;
+    min-height: 40vh;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0px;
+  }
+
+  .rightside {
+    max-width: 90%;
+    margin: 1%;
+  }
+
+  #copiar {
+    margin-top: 4px;
+    margin-bottom: 10vh;
+  }
+
+  #textosalida {
+    min-height: 30%;
+    max-height: 100vh;
+    min-height: 20vh;
+  }
+
+  button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .cajabotones {
+    width: 100%;
+    flex-direction: column;
+  }
+    
+  #Encriptadorvacio {
+    font-size: 70%;
+    margin-top: 5%;
+    margin-left: 5%;
+  }
+
+  .textoadvertencia {
+    font-size: 70%;
+  }
+
+  footer {
+    font-size: 50% ;
+  }
+}
